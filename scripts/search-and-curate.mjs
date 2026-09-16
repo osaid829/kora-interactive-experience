@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const PEXELS_KEY = "563492ad6f91700001000001";
+const PEXELS_KEY = process.env.PEXELS_KEY;
 const HEADERS = {
   Authorization: PEXELS_KEY,
   "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"

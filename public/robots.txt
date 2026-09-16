@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kora-sanctuary.vercel.app/sitemap.xml
+
+# Disallow crawl of admin and private areas
+Disallow: /_next/
+Disallow: /api/
+Disallow: /_vercel/
+
+# Disallow crawl of heavy media assets from search engines
+Disallow: /assets/videos/
+Disallow: /assets/frames/
+Disallow: /assets/images/*.original.*
+
+# Allow bots to access font files
+Allow: /fonts/

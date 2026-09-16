@@ -10,6 +10,7 @@ export interface OwnerConfig {
   readonly location: string;
   readonly targetRegions: readonly string[];
   readonly email: string;
+  readonly phone: string;
   readonly whatsappNumber: string;
   readonly whatsappUrl: string;
   readonly mailtoUrl: string;
@@ -90,11 +91,12 @@ export interface SiteConfig {
     readonly sectionId: string;
   }[];
   readonly sections: readonly SectionWireframe[];
+  readonly metadataBase: URL;
 }
 
 // Prefilled WhatsApp enquiry message crafted for high conversion from luxury business owners
 const PREFILLED_WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi Osaid, I just explored the KORA interactive experience. I run a business in Kathmandu/India and I want to create a website with this caliber of 3D craftsmanship and emotional impact. Let's discuss a project."
+  "Your website showcases exceptional interactive design with remarkable craftsmanship and emotional engagement. I'd love to learn more about your process and discuss how we could create something equally impactful for my business. Are you available for a brief conversation?"
 );
 
 // Prefilled Mailto subject and body
@@ -111,6 +113,7 @@ export const ownerConfig: OwnerConfig = {
   location: "Bhagalpur & Kathmandu Valley",
   targetRegions: ["Kathmandu Valley", "Pokhara", "Bhagalpur", "New Delhi", "Bengaluru"],
   email: "mdosaid37@gmail.com",
+  phone: "+91 8789627278",
   whatsappNumber: "+91 8789627278",
   whatsappUrl: `https://wa.me/918789627278?text=${PREFILLED_WHATSAPP_MESSAGE}`,
   mailtoUrl: `mailto:mdosaid37@gmail.com?subject=${PREFILLED_MAILTO_SUBJECT}&body=${PREFILLED_MAILTO_BODY}`,
@@ -394,6 +397,7 @@ export const siteConfig: SiteConfig = {
   colors: colorTokens,
   navigation: navigationItems,
   sections: siteSections,
+  metadataBase: new URL('https://kora-sanctuary.vercel.app'),
 } as const;
 
 export default siteConfig;
