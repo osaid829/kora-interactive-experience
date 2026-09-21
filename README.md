@@ -186,8 +186,8 @@ The concept is intentionally positioned between:
 Clone the repository:
 
 ```bash
-git clone https://github.com/osaid829/osaid-portfolio.git
-cd osaid-portfolio
+git clone https://github.com/osaid829/kora-interactive-experience.git
+cd kora-interactive-experience
 ```
 
 Install dependencies:
